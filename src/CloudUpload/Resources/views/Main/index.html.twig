@@ -1,0 +1,20 @@
+{% extends "CloudUpload::base.html.twig" %}
+
+
+{% block body %}
+
+    <form method="POST" action="{{ url }}" enctype="multipart/form-data">
+        {% for key, value in formdata %}
+            <input type="hidden" name="{{ key }}" value="{{ value }}">
+        {% endfor %}
+        <input type="file" name="1">
+        <input type="file" name="2">
+        <input type="file" name="3">
+        <button name="submit" type="submit">Send</button>
+    </form>
+
+
+    <hr>
+
+{% endblock %}
+
